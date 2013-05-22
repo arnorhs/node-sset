@@ -31,7 +31,6 @@ set.add({val: 5}, {val: 3});
 
 Obvious ***big*** things missing, namely:
 
-- delete
 - union
 - get thing at index
 - map

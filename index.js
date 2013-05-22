@@ -51,6 +51,28 @@ SortedSet.prototype.toString = function(value) {
     return "[SortedSet " + this.items.toString() + "]";
 };
 
+/*
+ * Removes an item by value from the array
+ *
+ * returns the item that was removed, or undefined if
+ * not found
+ */
+SortedSet.prototype.remove = function(value) {
+    var idx = this.indexOf(value);
+    if (idx < 0) return;
+    return this.removeAtIndex(idx);
+};
+
+/*
+ * Removes an item at an index
+ *
+ * returns the item that was removed, or undefined if
+ * not found
+ */
+SortedSet.prototype.removeAtIndex = function(idx) {
+    return this.items.splice(idx, 1)[0];
+};
+
 SortedSet.prototype.contains = function(item) {
     return this.indexOf(item) >= 0;
 };
