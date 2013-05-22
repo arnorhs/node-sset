@@ -1,13 +1,14 @@
 {
   "name": "sset",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Sorted Set in javascript for node that uses binary search for maintaining sort order",
   "main": "index.js",
   "dependencies": {
     "binary-search": "~1.0.1"
   },
   "devDependencies": {
-    "mocha": "~1.10.0"
+    "mocha": "~1.10.0",
+    "bnch": "0.0.x"
   },
   "scripts": {
     "test": "mocha"

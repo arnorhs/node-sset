@@ -2,7 +2,10 @@
 
 Yet another sorted set.
 
-Uses binary-sort to insert and search and insert in set
+Uses binary-sort to insert and search and insert in set.
+
+Also is much faster than searching through a normal array, as per this (maybe unfair) benchmark:
+![benchmark](http://f.cl.ly/items/2Q0d1b2y47290q3r0809/Screen%20Shot%202013-05-22%20at%201.58.46%20AM.png)
 
 ### Usage:
 
