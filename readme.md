@@ -1,4 +1,4 @@
-# SortedSet
+# sset - Sorted Set for javascript
 
 Yet another sorted set.
 
@@ -27,6 +27,10 @@ set.add({val: 5}, {val: 3});
 // set now contains [{val: 3}, {val: 5}];
 ```
 
+### Installation
+
+    npm install sset
+
 ### Todo
 
 Obvious ***big*** things missing, namely:
@@ -38,4 +42,8 @@ Obvious ***big*** things missing, namely:
 - shift
 - pop
 - toArray
+- join
 
+### License
+
+MIT
