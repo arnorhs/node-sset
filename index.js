@@ -23,19 +23,25 @@ function SortedSet(arr, cmp) {
     this.add.apply(this, arr);
 }
 
+/*
+ * Add items to the array
+ * accepts multiple arguments
+ * returns the index of the first element inserted
+ */
 SortedSet.prototype.add = function() {
-    var x, y, idx;
-    for (var i = 0, l = arguments.length; i < l; i++) {
+    var x, l, idx;
+    for (var i = arguments.length-1; i >= 0; i--) {
         idx = this.indexOf(arguments[i]);
         if (idx < 0) {
             x = -idx - 1;
-            y = 0;
+            l = 0;
         } else {
             x = idx;
-            y = 1;
+            l = 1;
         }
-        this.items.splice(x, y, arguments[i]);
+        this.items.splice(x, l, arguments[i]);
     }
+    return x;
 };
 
 SortedSet.prototype.contains = function(item) {
