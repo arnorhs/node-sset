@@ -40,14 +40,14 @@ SortedSet.prototype.add = function() {
 
 SortedSet.prototype.contains = function(item) {
     return this.indexOf(item) >= 0;
-}
+};
 
 SortedSet.prototype.containsAll = function(arr) {
     for (var i = 0, l = arr.length; i < l; i++) {
         if (!this.contains(arr[i])) return false;
     }
     return true;
-}
+};
 
 SortedSet.prototype.indexOf = function(item) {
     return binSearch(this.items, item, this.cmp);
