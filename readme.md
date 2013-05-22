@@ -38,6 +38,5 @@ Obvious ***big*** things missing, namely:
 - filter
 - shift
 - pop
-- toString
 - toArray
 

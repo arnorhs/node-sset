@@ -44,6 +44,13 @@ SortedSet.prototype.add = function() {
     return x;
 };
 
+/*
+ * returns a string summary of contents
+ */
+SortedSet.prototype.toString = function(value) {
+    return "[SortedSet " + this.items.toString() + "]";
+};
+
 SortedSet.prototype.contains = function(item) {
     return this.indexOf(item) >= 0;
 };
