@@ -21,6 +21,7 @@ set.add(3);
 
 ### Custom comparator
 
+```javascript
 var set = SortedSet(function(a, b) {
     return a.val - b.val;
 });
