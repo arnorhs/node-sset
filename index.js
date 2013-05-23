@@ -29,7 +29,7 @@ function SortedSet(arr, cmp) {
  *
  * returns the index of the first item inserted
  */
-SortedSet.prototype.add = function() {
+SortedSet.prototype.add = SortedSet.prototype.push = function() {
     return this.addFromArray(arguments);
 };
 
