@@ -55,8 +55,6 @@ set.add({val: 5}, {val: 3});
 
 ### Methods
 
-(Incomplete documentation)
-
 - `var set = SortedSet(array, comparator) constructor` - creates a new sorted set - all parameters are options. default comparator is a number comparator.
 - `set.add(obj [, obj [..obj]])` - adds object(s) to set
 - `set.addFromArray(array)` - adds many objects from an array
@@ -69,7 +67,7 @@ set.add({val: 5}, {val: 3});
 - `set.size()` - returns the number of items in the set
 - `set.toArray()` - returns an array of all items in the index (performs a copy)
 
-Methods that work the same as in Array:
+Methods that work the same as in a normal [Array](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array):
 
 - `set.map()`
 - `set.forEach()`
