@@ -44,11 +44,7 @@ Obvious ***big*** things missing, namely:
 - things handling other sets:
   - union
   - intersection
-- map
-- filter
-- shift & pop?
 - toArray
-- length
 - tests for all functionlity
 
 ### License

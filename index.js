@@ -135,6 +135,50 @@ SortedSet.prototype.indexOf = function(item) {
     return binSearch(this.items, item, this.cmp);
 };
 
+/*
+ * equivalent of Array#map
+ */
+SortedSet.prototype.map = function() {
+    return Array.prototype.map.apply(this.items, arguments);
+};
+
+/*
+ * equivalent of Array#filter
+ */
+SortedSet.prototype.filter = function() {
+    return Array.prototype.filter.apply(this.items, arguments);
+};
+
+/*
+ * equivalent of Array#forEach
+ */
+SortedSet.prototype.forEach = function() {
+    return Array.prototype.forEach.apply(this.items, arguments);
+};
+
+/*
+ * equivalent of Array#pop
+ */
+SortedSet.prototype.pop = function() {
+    return Array.prototype.pop.apply(this.items, arguments);
+};
+
+/*
+ * equivalent of Array#shift
+ */
+SortedSet.prototype.shift = function() {
+    return Array.prototype.shift.apply(this.items, arguments);
+};
+
+/*
+ * Get the size of the array
+ *
+ * returns an integer
+ */
+SortedSet.prototype.size = SortedSet.prototype.length = function() {
+    return this.items.length;
+};
+
 function defaultCmp(a,b) {
     return a-b;
 }
