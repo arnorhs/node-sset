@@ -6,8 +6,11 @@ Yet another sorted set, but with the following feature set:
 - Can contain any kind of object
 - You can specify a custom comparator, if you have objects, strings etc (default uses number values)
 
-Benchmark against array (though an array is not a set)
-![benchmark](http://f.cl.ly/items/2Q0d1b2y47290q3r0809/Screen%20Shot%202013-05-22%20at%201.58.46%20AM.png)
+Benchmark against finding in an array (though an array is not a set)
+![benchmark](http://f.cl.ly/items/3r0H3x0l0B2E2a3Z333J/Screen%20Shot%202013-05-23%20at%201.17.32%20AM.png)
+
+However, your penalty is at insertion time. If you insert a lot of items at a time, those insertions will be slow (though they can be speeded up):
+![benchmark](http://f.cl.ly/items/0V16351x2Y1U2e0l3o3i/Screen%20Shot%202013-05-23%20at%201.18.14%20AM.png)
 
 ### Usage:
 
