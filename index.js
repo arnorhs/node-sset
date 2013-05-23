@@ -179,6 +179,15 @@ SortedSet.prototype.size = SortedSet.prototype.length = function() {
     return this.items.length;
 };
 
+/*
+ * Export a copy of the internal array.
+ *
+ * returns an array
+ */
+SortedSet.prototype.toArray = function() {
+    return this.items.slice(0);
+};
+
 function defaultCmp(a,b) {
     return a-b;
 }
