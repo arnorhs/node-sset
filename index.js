@@ -64,6 +64,9 @@ SortedSet.prototype.remove = function(value) {
     return this.removeAtIndex(idx);
 };
 
+/*
+ * Gets an item by index from the array
+ */
 SortedSet.prototype.get = function (idx) {
     return this.items[idx];
 };
@@ -71,8 +74,8 @@ SortedSet.prototype.get = function (idx) {
 /*
  * Removes an item at an index
  *
- * returns the item that was removed, or undefined if
- * not found
+ * returns an array of the items that were found or undefined if
+ * nothing was found. (Default behavior of splice removal)
  */
 SortedSet.prototype.removeAtIndex = function(idx) {
     return this.items.splice(idx, 1)[0];
