@@ -48,7 +48,8 @@ SortedSet.prototype.add = function() {
  * returns a string summary of contents
  */
 SortedSet.prototype.toString = function(value) {
-    return "[SortedSet " + this.items.toString() + "]";
+    var contents = this.items.length > 0 ? "[" + this.items.toString() + "]" : "empty";
+    return "{" + this.constructor.name + " " + contents + "}";
 };
 
 /*
