@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "mocha": "~1.10.0",
+    "deep-equal": "~0.0.0",
     "bnch": "0.0.x"
   },
   "scripts": {
