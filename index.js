@@ -53,6 +53,13 @@ SortedSet.prototype.toString = function(value) {
 };
 
 /*
+ * Gets an item by index from the array
+ */
+SortedSet.prototype.get = function (idx) {
+    return this.items[idx];
+};
+
+/*
  * Removes an item by value from the array
  *
  * returns the item that was removed, or undefined if
@@ -62,13 +69,6 @@ SortedSet.prototype.remove = function(value) {
     var idx = this.indexOf(value);
     if (idx < 0) return;
     return this.removeAtIndex(idx);
-};
-
-/*
- * Gets an item by index from the array
- */
-SortedSet.prototype.get = function (idx) {
-    return this.items[idx];
 };
 
 /*
