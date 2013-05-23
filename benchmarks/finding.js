@@ -1,5 +1,5 @@
 var bnch = require('bnch'),
-    SortedSet = require('./');
+    SortedSet = require('../');
 
 var arr = [];
 for (var i = 0; i < 100000; i++) {
