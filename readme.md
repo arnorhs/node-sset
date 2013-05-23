@@ -57,25 +57,25 @@ set.add({val: 5}, {val: 3});
 
 (Incomplete documentation)
 
-- *var set = SortedSet(array, comparator) constructor* - creates a new sorted set - all parameters are options. default comparator is a number comparator.
-- *set.add(obj [, obj [..obj]])* - adds object(s) to set
-- *set.addFromArray(array)* - adds many objects from an array
-- *set.get(index)* - gets item from array by index (not really predictable or useful unless you know the index of the object)
-- *set.remove(obj)* - removes a value or object by reference from the set
-- *set.removeAtIndex(index)* - removes an item by index
-- *set.contains(obj)* - returns true if the set contains obj
-- *set.containsAll(array)* - returns true if the set contains all objects in array
-- *set.indexOf(obj)* - returns the index of the item in the array
-- *set.size()* - returns the number of items in the set
-- *set.toArray()* - returns an array of all items in the index (performs a copy)
+- `var set = SortedSet(array, comparator) constructor` - creates a new sorted set - all parameters are options. default comparator is a number comparator.
+- `set.add(obj [, obj [..obj]])` - adds object(s) to set
+- `set.addFromArray(array)` - adds many objects from an array
+- `set.get(index)` - gets item from array by index (not really predictable or useful unless you know the index of the object)
+- `set.remove(obj)` - removes a value or object by reference from the set
+- `set.removeAtIndex(index)` - removes an item by index
+- `set.contains(obj)` - returns true if the set contains obj
+- `set.containsAll(array)` - returns true if the set contains all objects in array
+- `set.indexOf(obj)` - returns the index of the item in the array
+- `set.size()` - returns the number of items in the set
+- `set.toArray()` - returns an array of all items in the index (performs a copy)
 
 Methods that work the same as in Array:
 
-- *set.map()*
-- *set.forEach()*
-- *set.filter()*
-- *set.pop()*
-- *set.shift()*
+- `set.map()`
+- `set.forEach()`
+- `set.filter()`
+- `set.pop()`
+- `set.shift()`
 
 ### Running tests & benchmark
 
