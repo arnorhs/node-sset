@@ -4,8 +4,8 @@ var SortedSet = require('./'),
 
 // check that sorting is correct after adding random items
 // check that sorting is correct
-d("inserting", function() {
-    d("into 3,2,1,0 a value of", function() {
+d("SortedSet#add", function() {
+    d("into [3,2,1,0] a value of", function() {
         var ss;
         beforeEach(function() {
             ss = SortedSet([3,2,1,0]);
