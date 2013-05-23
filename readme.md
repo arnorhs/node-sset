@@ -41,13 +41,14 @@ set.add({val: 5}, {val: 3});
 
 Obvious ***big*** things missing, namely:
 
-- union
+- things handling other sets:
+  - union
+  - intersection
 - map
 - filter
-- shift
-- pop
+- shift & pop?
 - toArray
-- join
+- length
 - tests for all functionlity
 
 ### License
