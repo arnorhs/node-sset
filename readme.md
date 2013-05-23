@@ -42,13 +42,13 @@ set.add({val: 5}, {val: 3});
 Obvious ***big*** things missing, namely:
 
 - union
-- get thing at index
 - map
 - filter
 - shift
 - pop
 - toArray
 - join
+- tests for all functionlity
 
 ### License
 

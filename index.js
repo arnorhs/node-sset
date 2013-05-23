@@ -63,6 +63,10 @@ SortedSet.prototype.remove = function(value) {
     return this.removeAtIndex(idx);
 };
 
+SortedSet.prototype.get = function (idx) {
+    return this.items[idx];
+};
+
 /*
  * Removes an item at an index
  *

@@ -38,6 +38,16 @@ d("inserting", function() {
     });
 });
 
+d("SortedSet#get", function() {
+    var first = 1111,
+        last = 2222;
+    var ss = SortedSet([first,last]);
+    it("should return the correct item", function() {
+        assert(ss.get(0) === first, "First item is not " + first);
+        assert(ss.get(1) === last, "Last item is not " + last);
+    });
+});
+
 var insertAssert = function(value, expected) {
     assert(value === expected, "Was not inserted correctly, expected: " + expected + ", but was: " + value);
 };
