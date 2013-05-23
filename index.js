@@ -77,10 +77,20 @@ SortedSet.prototype.removeAtIndex = function(idx) {
     return this.items.splice(idx, 1)[0];
 };
 
+/*
+ * Checks for the presence of a value in the array
+ *
+ * Returns true if it was found, false if not
+ */
 SortedSet.prototype.contains = function(item) {
     return this.indexOf(item) >= 0;
 };
 
+/*
+ * Checks for the presence of all values in an array
+ *
+ * Returns true if they were all found, false if not
+ */
 SortedSet.prototype.containsAll = function(arr) {
     for (var i = 0, l = arr.length; i < l; i++) {
         if (!this.contains(arr[i])) return false;
@@ -88,6 +98,13 @@ SortedSet.prototype.containsAll = function(arr) {
     return true;
 };
 
+/*
+ * Does a binary search for the particular item.
+ *
+ * Returns the index if the item is found, if not, the index of the item
+ * that is the closest match + 1 will be returned as a minus value (that
+ * is decided by the binary-search module)
+ */
 SortedSet.prototype.indexOf = function(item) {
     return binSearch(this.items, item, this.cmp);
 };
