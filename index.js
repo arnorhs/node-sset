@@ -20,27 +20,49 @@ function SortedSet(arr, cmp) {
 
     arr = arr || [];
     // add all elements sorted
-    this.add.apply(this, arr);
+    this.addFromArray(arr);
 }
 
 /*
- * Add items to the array
+ * Add item to the array
  * accepts multiple arguments
- * returns the index of the first element inserted
+ *
+ * returns the index of the first item inserted
  */
 SortedSet.prototype.add = function() {
-    var x, l, idx;
-    for (var i = arguments.length-1; i >= 0; i--) {
-        idx = this.indexOf(arguments[i]);
-        if (idx < 0) {
-            x = -idx - 1;
-            l = 0;
-        } else {
-            x = idx;
-            l = 1;
-        }
-        this.items.splice(x, l, arguments[i]);
+    return this.addFromArray(arguments);
+};
+
+/*
+ * Add items from an unsorted array-like object
+ * (Note: #add() uses this method with it's arguments object)
+ *
+ * returns the index of the first item inserted
+ */
+SortedSet.prototype.addFromArray = function(arr) {
+    var firstIndex;
+    for (var i = arr.length-1; i >= 0; i--) {
+        firstIndex = this.addOne(arr[i]);
     }
+    return firstIndex;
+};
+
+/*
+ * Adds a single item into the array
+ *
+ * returns the index of the item that was inserted
+ */
+SortedSet.prototype.addOne = function(item) {
+    var x, l,
+        idx = this.indexOf(item);
+    if (idx < 0) {
+        x = -idx - 1;
+        l = 0;
+    } else {
+        x = idx;
+        l = 1;
+    }
+    this.items.splice(x, l, item);
     return x;
 };
 
